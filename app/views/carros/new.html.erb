@@ -35,13 +35,19 @@
 		   
 		 </tr>
 		 <tr>
-		    <td> <%= f.label :ano %> </td> <td> <%= f.text_field :ano %> <%= f.label :placa %> <%= f.text_field :placa %></td>
+		    <td> <%= f.label :ano %> </td> <td> <%= f.text_field :ano %> </td>
 		 </tr>
 		 <tr>
-		 <td> <%= f.label :ano_aquisicao %></td> <td> <%= f.text_field :ano_aquisicao %> <%= f.label :cor %> <%= f.text_field :cor %></td>
+		 	<td><%= f.label :placa %></td> <td><%= f.text_field :placa %></td>
+		 </tr>
+		 <tr>
+		 	<td><%= f.label :cor %></td> <td><%= f.text_field :cor %></td>
+		 </tr>
+		 <tr>
+			 <td> <%= f.label :ano_aquisicao %></td> <td> <%= f.text_field :ano_aquisicao %> </td>
 		 </tr>
 		 
-		 <tr> <td> <%= f.submit %></td> </tr>
+		 <tr> <td> <%= f.submit %> </td> <td><%= link_to 'Voltar para listagem', carros_path %></td> </tr>
 	</table>
 	<% end %>
     </div>
