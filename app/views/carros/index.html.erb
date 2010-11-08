@@ -20,7 +20,7 @@
 		</div>
    <div id="CONTEUDO">
           <b> Listagem de Carros</b>
-          <b> <%= link_to 'Novo Carro', new_carro_path%> </b>
+          <span id=linknew> <%= link_to 'Novo Carro', new_carro_path%> </span>
 		   <hr>
 		   <table width="300" class="mytable">
 		   <tr>
@@ -40,8 +40,8 @@
     <td><%= carro.placa %></td>
     <td><%= carro.ano_aquisicao %></td>
     <td><%= carro.cor %></td>
-    <td><%= link_to 'E', edit_carro_path(carro) %></td>
-    <td><%= link_to 'R', carro, :confirm => 'Tem certeza?', :method => :delete %></td>
+    <td><%= link_to 'E', edit_carro_path(carro), :title => 'Editar' %></td>
+    <td><%= link_to 'R', carro, :confirm => 'Tem certeza que deseja remover?', :method => :delete, :title => 'Remover' %></td>
   </tr>
   <% end %>
         </table>

@@ -2,14 +2,22 @@ body {
  margin:0px;
  padding:0px;
  background-color:#E8E8E8;
- color: WHITE;
+ color: black;
  font: 11px "Trebuchet MS", Calibri, Verdana, Arial;
 }
-b{
+#CONTEUDO b{
  
  color: black;
  font: 17px "sans-serif", Verdana, Arial;
  padding-left:20px;
+}
+b{
+padding-left:20px;
+color:black;
+font-size:14px;
+}
+p{
+color:#104E8B;
 }
 h3{
   
@@ -26,6 +34,21 @@ tr{
 padding-left:10px;
 }
 a{
+text-decoration:none;
+}
+a:hover{
+text-decoration:underline;
+}
+#links{
+padding-left:20px;
+}
+#notice{
+color:green;
+font-size:16px;
+font-weight:Bold;
+padding-left:20px;
+}
+#MENU a{
  text-decoration:none;
  margin-left:10px;
  color : #104E8B;
@@ -35,10 +58,10 @@ a{
  padding-left:10px;
  padding-right:10px; 
 }
-a:active{
+#MENU a:active{
  background-color: #E8E8E8;
 }
-a:hover{
+#MENU a:hover{
  background-color: #E8E8E8;
  padding-left:10px;
  padding-right:10px; 
@@ -64,6 +87,11 @@ a:hover{
 #MENU {
  background: #6CA6CD;
 }
+#linknew{
+float:right;
+padding-right:20px;
+padding-top:3px;
+}
 table.mytable { width: 100%; padding: 0px; border: none; border: 2px solid #6CA6CD;}
-table.mytable td { font-size: 12px; border: none; background-color: #104E8B; color:white; 
+table.mytable th { font-size: 12px; border: none; background-color: #104E8B; color:white; 
  padding: 2px; font-weight: bold; }

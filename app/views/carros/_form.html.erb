@@ -1,41 +1,67 @@
-<%= form_for(@carro) do |f| %>
-  <% if @carro.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@carro.errors.count, "error") %> prohibited this carro from being saved:</h2>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<link href="estilo.css" rel="stylesheet" type="text/css">
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+<title>Ret-Car - Locação de veículos</title>
+</meta></head>
+<body>
 
-      <ul>
-      <% @carro.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<div id="GERAL">
 
-  <div class="field">
-    <%= f.label :marca %><br />
-    <%= f.text_field :marca %>
+   <div id="TOPO"> 
+        <img src="/images/logo_01.gif"> </img> 
+   </div>
+      <div id="MENU"> 
+		    <a href="/carros/new"> Carros</a> 
+			<a href="/clientes/new"> Clientes</a> 
+			<a href="#"> Locações</a>
+	 </div>
+	<div id="CONTEUDO">
+	<%= form_for(@carro) do |f| %>
+  	<% if @carro.errors.any? %>
+	    <div id="error_explanation">
+	      <h2><%= pluralize(@carro.errors.count, "error") %> prohibited this carro from being saved:</h2>
+
+	      <ul>
+	      <% @carro.errors.full_messages.each do |msg| %>
+	        <li><%= msg %></li>
+	      <% end %>
+	      </ul>
+	    </div>
+  	<% end %>
+
+	 <table>
+		 <tr> <td> <h3> Dados do Carro: </h3> </td></tr>
+		 
+		<tr> 
+		   <td> <%= f.label :marca %> </td> <td> <%= f.text_field :marca %> </td> 
+		   
+		 </tr>
+		<tr> 
+		   <td> <%= f.label :modelo %> </td> <td> <%= f.text_field :modelo %> </td> 
+		   
+		 </tr>
+		 <tr>
+		    <td> <%= f.label :ano %> </td> <td> <%= f.text_field :ano %> </td>
+		 </tr>
+		 <tr>
+		 	<td><%= f.label :placa %></td> <td><%= f.text_field :placa %></td>
+		 </tr>
+		 <tr>
+		 	<td><%= f.label :cor %></td> <td><%= f.text_field :cor %></td>
+		 </tr>
+		 <tr>
+			 <td> <%= f.label :ano_aquisicao %></td> <td> <%= f.text_field :ano_aquisicao %> </td>
+		 </tr>
+		 
+		 <tr> <td> <%= f.submit %> </td> <td><%= link_to 'Voltar para listagem', carros_path %></td> </tr>
+	</table>
   </div>
-  <div class="field">
-    <%= f.label :modelo %><br />
-    <%= f.text_field :modelo %>
-  </div>
-  <div class="field">
-    <%= f.label :ano %><br />
-    <%= f.text_field :ano %>
-  </div>
-  <div class="field">
-    <%= f.label :placa %><br />
-    <%= f.text_field :placa %>
-  </div>
-  <div class="field">
-    <%= f.label :ano_aquisicao %><br />
-    <%= f.text_field :ano_aquisicao %>
-  </div>
-  <div class="field">
-    <%= f.label :cor %><br />
-    <%= f.text_field :cor %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  
 <% end %>
+
+ </div>
+
+</body>
+</html>

@@ -44,7 +44,7 @@ class CarrosController < ApplicationController
 
     respond_to do |format|
       if @carro.save
-        format.html { redirect_to(@carro, :notice => 'Carro was successfully created.') }
+        format.html { redirect_to(@carro, :notice => 'Carro criado com sucesso.') }
         format.xml  { render :xml => @carro, :status => :created, :location => @carro }
       else
         format.html { render :action => "new" }
@@ -60,7 +60,7 @@ class CarrosController < ApplicationController
 
     respond_to do |format|
       if @carro.update_attributes(params[:carro])
-        format.html { redirect_to(@carro, :notice => 'Carro was successfully updated.') }
+        format.html { redirect_to(@carro, :notice => 'Carro atualizado com sucesso.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
