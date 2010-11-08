@@ -1,75 +1,108 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<link href="estilo.css" rel="stylesheet" type="text/css">
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+<title>Ret-Car - Locação de veículos</title>
+</meta></head>
+<body>
 
-<p>
-  <b>Nome:</b>
-  <%= @cliente.nome %>
-</p>
+<div id="GERAL">
 
-<p>
-  <b>Nome pai:</b>
-  <%= @cliente.nome_pai %>
-</p>
+   <div id="TOPO"> 
+        <img src="/images/logo_01.gif"> </img> 
+   </div>
+      <div id="MENU"> 
+		    <a href="/carros/new"> Carros</a> 
+			<a href="/clientes/new"> Clientes</a> 
+			<a href="#"> Locações</a>
+	 </div>
+	<div id="CONTEUDO">
+	<%= form_for(@cliente) do |f| %>
 
-<p>
-  <b>Nome mãe:</b>
-  <%= @cliente.nome_mae %>
-</p>
+	 <table>
+		<p id="notice"><%= notice %></p>
 
-<p>
-  <b>Data nascimento:</b>
-  <%= @cliente.data_nascimento %>
-</p>
+		<p>
+		 <b>Nome:</b>
+			  <%= @cliente.nome %>
+   		 </p>
 
-<p>
-  <b>Telefone:</b>
-  <%= @cliente.telefone %>
-</p>
+		<p>
+  		<b>Nome pai:</b>
+	  		 <%= @cliente.nome_pai %>
+		</p>
 
-<p>
-  <b>Cpf:</b>
-  <%= @cliente.cpf %>
-</p>
+		<p>
+	   	<b>Nome mãe:</b>
+  			<%= @cliente.nome_mae %>
+		</p>
 
-<p>
-  <b>Habilitação:</b>
-  <%= @cliente.habilitacao %>
-</p>
+		<p>
+  		<b>Data nascimento:</b>
+  			<%= @cliente.data_nascimento %>
+		</p>
 
-<p>
-  <b>Naturalidade:</b>
-  <%= @cliente.naturalidade %>
-</p>
+		<p>
+  		<b>Telefone:</b>
+  			<%= @cliente.telefone %>
+		</p>
 
-<p>
-  <b>Logradouro:</b>
-  <%= @cliente.logradouro %>
-</p>
+		<p>
+  		<b>Cpf:</b>
+  			<%= @cliente.cpf %>
+		</p>
+			
+		<p>
+  		<b>Habilitação:</b>
+  			<%= @cliente.habilitacao %>
+		</p>
+		
+		<p>
+  		<b>Naturalidade:</b>
+		  	<%= @cliente.naturalidade %>
+		</p>
+		
+		<p>
+  		<b>Logradouro:</b>
+  			<%= @cliente.logradouro %>
+		</p>
+	
+		<p>
+  		<b>Número:</b>
+  			<%= @cliente.numero %>
+		</p>
+		
+		<p>
+  		<b>Bairro:</b>
+  			<%= @cliente.bairro %>
+		</p>
+		
+		<p>
+  		<b>Município:</b>
+  			<%= @cliente.municipio %>
+		</p>
+		
+		<p>
+  		<b>Cep:</b>
+  			<%= @cliente.cep %>
+		</p>
+		
+		<p>
+  		<b>Estado:</b>
+  	  		<%= @cliente.estado %>
+		</p>
+		
+		<div id="links">
+			<%= link_to 'Edit', edit_cliente_path(@cliente) %> |
+			<%= link_to 'OK', clientes_path %>
+		</div>
+	</table>
+  </div>
+  
+<% end %>
 
-<p>
-  <b>Número:</b>
-  <%= @cliente.numero %>
-</p>
+ </div>
 
-<p>
-  <b>Bairro:</b>
-  <%= @cliente.bairro %>
-</p>
-
-<p>
-  <b>Município:</b>
-  <%= @cliente.municipio %>
-</p>
-
-<p>
-  <b>Cep:</b>
-  <%= @cliente.cep %>
-</p>
-
-<p>
-  <b>Estado:</b>
-  <%= @cliente.estado %>
-</p>
-
-
-<%= link_to 'Edit', edit_cliente_path(@cliente) %> |
-<%= link_to 'Back', clientes_path %>
+</body>
+</html>

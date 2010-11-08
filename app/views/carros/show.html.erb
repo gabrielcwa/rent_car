@@ -1,36 +1,68 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<link href="estilo.css" rel="stylesheet" type="text/css">
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+<title>Ret-Car - Locação de veículos</title>
+</meta></head>
+<body>
 
-<p>
-  <b>Marca:</b>
-  <%= @carro.marca %>
-</p>
+<div id="GERAL">
 
-<p>
-  <b>Modelo:</b>
-  <%= @carro.modelo %>
-</p>
+   <div id="TOPO"> 
+        <img src="/images/logo_01.gif"> </img> 
+   </div>
+      <div id="MENU"> 
+		    <a href="/carros/new"> Carros</a> 
+			<a href="/clientes/new"> Clientes</a> 
+			<a href="#"> Locações</a>
+	 </div>
+	<div id="CONTEUDO">
+	<%= form_for(@carro) do |f| %>
 
-<p>
-  <b>Ano:</b>
-  <%= @carro.ano %>
-</p>
+	 <table>
+		<p id="notice"><%= notice %></p>
+			<hr>
+		<p>
+  		<b>Marca:</b>
+  		<%= @carro.marca %>
+		</p>
 
-<p>
-  <b>Placa:</b>
-  <%= @carro.placa %>
-</p>
+		<p>
+  		<b>Modelo:</b>
+  		<%= @carro.modelo %>
+		</p>
 
-<p>
-  <b>Ano aquisicao:</b>
-  <%= @carro.ano_aquisicao %>
-</p>
+		<p>
+  		<b>Ano:</b>
+  		<%= @carro.ano %>
+		</p>
 
-<p>
-  <b>Cor:</b>
-  <%= @carro.cor %>
-</p>
+		<p>
+  		<b>Placa:</b>
+  		<%= @carro.placa %>
+		</p>
 
-<div id="links">
-<%= link_to 'Editar', edit_carro_path(@carro) %> |
-<%= link_to 'OK', carros_path %>
-</div>
+		<p>
+  		<b>Ano aquisicao:</b>
+  		<%= @carro.ano_aquisicao %>
+		</p>
+
+		<p>
+  		<b>Cor:</b>
+  		<%= @carro.cor %>
+		</p>
+
+		<div id="links">
+ 	 	<%= link_to 'Editar', edit_carro_path(@carro) %> |
+	 	<%= link_to 'OK', carros_path %>
+		</div>
+	</table>
+  </div>
+  
+<% end %>
+
+ </div>
+
+</body>
+</html>

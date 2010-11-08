@@ -1,73 +1,82 @@
-<%= form_for(@cliente) do |f| %>
-  <% if @cliente.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@cliente.errors.count, "error") %> prohibited this cliente from being saved:</h2>
 
-      <ul>
-      <% @cliente.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<link href="estilo.css" rel="stylesheet" type="text/css">
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+<title>Ret-Car - Locação de veículos</title>
+</meta></head>
+<body>
+
+<div id="GERAL">
+
+   <div id="TOPO"> 
+        <img src="/images/logo_01.gif"> </img> 
+   </div>
+      <div id="MENU"> 
+		    <a href="/carros/new"> Carros</a> 
+			<a href="/clientes/new"> Clientes</a> 
+			<a href="#"> Locações</a>
+	 </div>
+   <div id="CONTEUDO">
+   	<%= form_for(@cliente) do |f| %>
+          <b> Cadastro de Clientes</b>
+		   
+		  <hr> 
+		 
+		 <table>
+		 <tr> <td> <h3> Dados Pessoais: </h3> </td></tr>
+		 <tr> 
+		   <td> <%= f.label :nome %> </td> <td> <%= f.text_field :nome, :size=>50%> </td> 
+    		
+		 </tr>
+		<tr> 
+		  <td> <%= f.label :nome_pai, 'Nome do Pai'%> </td> <td> <%= f.text_field :nome_pai, :size=>50%> </td> 
+		   
+		 </tr>
+		 <tr>
+			<td> <%= f.label :nome_mae,'Nome da Mãe'%> </td> <td> <%= f.text_field :nome_mae, :size=>50%> </td> 
+		 </tr>
+		 <tr>
+		 <td> <%= f.label :data_nascimento, 'Data de Nascimento '%> </td> <td> <%= f.text_field :data_nascimento, :size=>12%> <%= f.label :telefone%> <%= f.text_field :telefone, :size=>12%></td>
+		 </tr>
+		 <tr>
+		    <td>  <%= f.label :cpf, 'CPF'%> </td> <td>  <%= f.text_field :cpf, :size=>12%>  <%= f.label :habilitacao, 'Habilitação'%>  <%= f.text_field :habilitacao, :size=>12%></td>
+			
+		 </tr>
+		 
+		 <tr>
+		    <td>  <%= f.label :naturalidade%> </td> <td>  <%= f.text_field :naturalidade, :size=>12%> </td>
+		 </tr>
+		 
+		<tr> <td> <h3> Endereço: </h3> </td></tr>
+		<tr> 
+		   <td>  <%= f.label :logradouro%> </td> <td>  <%= f.text_field :logradouro, :size=>50%> </td> 
+		   
+		 </tr>
+		<tr> 
+		   <td> <%= f.label :numero%> </td> <td>  <%= f.text_field:numero, :size=>4%>   <%= f.label :cep, 'CEP'%> <%= f.text_field :cep,  :size=>10%> </td> 
+		 <tr>
+		    <td> <%= f.label :bairro%> </td> <td> <%= f.text_field :bairro, :size=>20%> </td>
+		 </tr>
+		 <tr>
+		 <td> <%= f.label :municipio%></td> <td> <%= f.text_field :municipio, :size=>20%></td>
+		 </tr>
+		 <tr>
+		   <td> <%= f.label :estado%> </td> <td> <%= f.text_field :estado, :size=>12%> </td>
+		 </tr>
+		 <tr>
+		    <td> <%= f.label :naturalidade%> </td> <td> <%= f.text_field:naturalidade, :size=>12%> </td>
+		 </tr>
+		 
+		 <tr> <td> <%= f.submit %> </td> <td><%= link_to 'Voltar para listagem', clientes_path %></td> </tr>
+		 </table>
+	<% end %>
     </div>
-  <% end %>
+ 
+   
+  
+ </div>
 
-  <div class="field">
-    <%= f.label :nome %><br />
-    <%= f.text_field :nome %>
-  </div>
-  <div class="field">
-    <%= f.label :nome_pai %><br />
-    <%= f.text_field :nome_pai %>
-  </div>
-  <div class="field">
-    <%= f.label :nome_mae %><br />
-    <%= f.text_field :nome_mae %>
-  </div>
-  <div class="field">
-    <%= f.label :data_nascimento %><br />
-    <%= f.text_field :data_nascimento %>
-  </div>
-  <div class="field">
-    <%= f.label :telefone %><br />
-    <%= f.text_field :telefone %>
-  </div>
-  <div class="field">
-    <%= f.label :cpf %><br />
-    <%= f.text_field :cpf %>
-  </div>
-  <div class="field">
-    <%= f.label :habilitacao %><br />
-    <%= f.text_field :habilitacao %>
-  </div>
-  <div class="field">
-    <%= f.label :naturalidade %><br />
-    <%= f.text_field :naturalidade %>
-  </div>
-  <div class="field">
-    <%= f.label :logradouro %><br />
-    <%= f.text_field :logradouro %>
-  </div>
-  <div class="field">
-    <%= f.label :numero %><br />
-    <%= f.text_field :numero %>
-  </div>
-  <div class="field">
-    <%= f.label :bairro %><br />
-    <%= f.text_field :bairro %>
-  </div>
-  <div class="field">
-    <%= f.label :municipio %><br />
-    <%= f.text_field :municipio %>
-  </div>
-  <div class="field">
-    <%= f.label :cep %><br />
-    <%= f.text_field :cep %>
-  </div>
-  <div class="field">
-    <%= f.label :estado %><br />
-    <%= f.text_field :estado %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</body>
+</html>

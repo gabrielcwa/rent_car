@@ -11,17 +11,7 @@
 
 	<div id="CONTEUDO">
 	<%= form_for(@carro) do |f| %>
-  	<% if @carro.errors.any? %>
-	    <div id="error_explanation">
-	      <h2><%= pluralize(@carro.errors.count, "error") %> prohibited this carro from being saved:</h2>
-
-	      <ul>
-	      <% @carro.errors.full_messages.each do |msg| %>
-	        <li><%= msg %></li>
-	      <% end %>
-	      </ul>
-	    </div>
-  	<% end %>
+	
 	<%= render 'form' %>
 
   </div>

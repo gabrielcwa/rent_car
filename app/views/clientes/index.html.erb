@@ -20,6 +20,7 @@
 		</div>
    <div id="CONTEUDO">
           <b> Listagem de Clientes</b>
+          <span id=linknew> <%= link_to 'Novo Cliente', new_cliente_path%> </span>
 		   <hr>
 		   <table width="300" class="mytable">
 		    <tr>
@@ -47,8 +48,8 @@
     <td><%= cliente.bairro %></td>
     <td><%= cliente.municipio %></td>
     <td><%= cliente.estado %></td>
-    <td><%= link_to 'E', edit_cliente_path(cliente),:title => "Editar" %></td>
-    <td><%= link_to 'R', cliente, :confirm => 'Você tem certeza?', :method => :delete %></td>
+    <td><%= link_to 'E', edit_cliente_path(cliente), :title => 'Editar' %></td>
+    <td><%= link_to 'R', cliente, :confirm => 'Tem certeza que deseja remover?', :method => :delete, :title => 'Remover' %></td>
   </tr>
   <% end %>
     </table>

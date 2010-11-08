@@ -44,7 +44,7 @@ class ClientesController < ApplicationController
 
     respond_to do |format|
       if @cliente.save
-        format.html { redirect_to(@cliente, :notice => 'Cliente was successfully created.') }
+        format.html { redirect_to(@cliente, :notice => 'Cliente cadastrado com sucesso.') }
         format.xml  { render :xml => @cliente, :status => :created, :location => @cliente }
       else
         format.html { render :action => "new" }
@@ -60,7 +60,7 @@ class ClientesController < ApplicationController
 
     respond_to do |format|
       if @cliente.update_attributes(params[:cliente])
-        format.html { redirect_to(@cliente, :notice => 'Cliente was successfully updated.') }
+        format.html { redirect_to(@cliente, :notice => 'Cliente atualizado com sucesso.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
