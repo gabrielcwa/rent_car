@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  marca: MyString
+  modelo: MyString
+  ano: MyString
+  placa: MyString
+  ano_aquisicao: MyString
+  cor: MyString
+
+two:
+  marca: MyString
+  modelo: MyString
+  ano: MyString
+  placa: MyString
+  ano_aquisicao: MyString
+  cor: MyString

@@ -1,4 +1,6 @@
 RentCar::Application.routes.draw do
+  resources :carros
+
   resources :clientes
 
   # The priority is based upon order of creation:
