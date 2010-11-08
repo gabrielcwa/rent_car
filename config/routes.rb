@@ -2,6 +2,8 @@ RentCar::Application.routes.draw do
   resources :carros
 
   resources :clientes
+  
+  root to: "clientes#new"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
