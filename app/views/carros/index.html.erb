@@ -1,19 +1,37 @@
-<h1>Listing carros</h1>
+# encoding: utf-8
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<link href="estilo.css" rel="stylesheet" type="text/css">
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+<title>Ret-Car - Locação de veículos</title>
+</meta></head>
+<body>
 
-<table>
-  <tr>
-    <th>Marca</th>
+<div id="GERAL">
+
+   <div id="TOPO"> 
+        <img src="/images/logo_01.gif"> </img> 
+   </div>
+      <div id="MENU"> 
+		    <a href="/carros/new"> Carros</a> 
+			<a href="/clientes/new"> Clientes</a> 
+			<a href="#"> Locações</a>
+		</div>
+   <div id="CONTEUDO">
+          <b> Listagem de Carros</b>
+		   <hr>
+		   <table width="300" class="mytable">
+		   <tr>
+    <th width=20%>Marca</th>
     <th>Modelo</th>
     <th>Ano</th>
     <th>Placa</th>
     <th>Ano aquisicao</th>
     <th>Cor</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th colspan=2> Ações </th>
   </tr>
-
-<% @carros.each do |carro| %>
+  <% @carros.each do |carro| %>
   <tr>
     <td><%= carro.marca %></td>
     <td><%= carro.modelo %></td>
@@ -21,13 +39,18 @@
     <td><%= carro.placa %></td>
     <td><%= carro.ano_aquisicao %></td>
     <td><%= carro.cor %></td>
-    <td><%= link_to 'Show', carro %></td>
-    <td><%= link_to 'Edit', edit_carro_path(carro) %></td>
-    <td><%= link_to 'Destroy', carro, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'E', edit_carro_path(carro) %></td>
+    <td><%= link_to 'R', carro, :confirm => 'Tem certeza?', :method => :delete %></td>
   </tr>
-<% end %>
-</table>
+  <% end %>
+        </table>
+		 
+		
+    </div>
+ 
+   
+  
+ </div>
 
-<br />
-
-<%= link_to 'New Carro', new_carro_path %>
+</body>
+</html>

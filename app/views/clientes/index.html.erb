@@ -1,49 +1,64 @@
-<h1>Listing clientes</h1>
+# encoding: utf-8
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<link href="estilo.css" rel="stylesheet" type="text/css">
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+<title>Ret-Car - Locação de veículos</title>
+</meta></head>
+<body>
 
-<table>
-  <tr>
-    <th>Nome</th>
-    <th>Nome pai</th>
-    <th>Nome mae</th>
-    <th>Data nascimento</th>
-    <th>Telefone</th>
-    <th>Cpf</th>
-    <th>Habilitacao</th>
-    <th>Naturalidade</th>
-    <th>Logradouro</th>
-    <th>Numero</th>
-    <th>Bairro</th>
-    <th>Municipio</th>
-    <th>Cep</th>
-    <th>Estado</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div id="GERAL">
 
-<% @clientes.each do |cliente| %>
-  <tr>
+   <div id="TOPO"> 
+        <img src="/images/logo_01.gif"> </img> 
+   </div>
+      <div id="MENU"> 
+		    <a href="/carros/new"> Carros</a> 
+			<a href="/clientes/new"> Clientes</a> 
+			<a href="#"> Locações</a>
+		</div>
+   <div id="CONTEUDO">
+          <b> Listagem de Clientes</b>
+		   <hr>
+		   <table width="300" class="mytable">
+		    <tr>
+              <th width=15%>Nome</th>
+              <th>Nascimento</th>
+              <th width=15%>CPF</th>
+              <th>Habilitacao</th>
+              <th>Telefone</th>
+              <th>Logradouro</th>
+              <th>Numero</th>
+              <th>Bairro</th>
+              <th>Municipio</th>
+              <th>Estado</th>
+              <th colspan=2 >Ações</th>
+            </tr>
+	<% @clientes.each do |cliente| %>
+	<tr>
     <td><%= cliente.nome %></td>
-    <td><%= cliente.nome_pai %></td>
-    <td><%= cliente.nome_mae %></td>
     <td><%= cliente.data_nascimento %></td>
-    <td><%= cliente.telefone %></td>
     <td><%= cliente.cpf %></td>
-    <td><%= cliente.habilitacao %></td>
-    <td><%= cliente.naturalidade %></td>
-    <td><%= cliente.logradouro %></td>
+	<td><%= cliente.habilitacao %></td>
+    <td><%= cliente.telefone %></td>
+	<td><%= cliente.logradouro %></td>
     <td><%= cliente.numero %></td>
     <td><%= cliente.bairro %></td>
     <td><%= cliente.municipio %></td>
-    <td><%= cliente.cep %></td>
     <td><%= cliente.estado %></td>
-    <td><%= link_to 'Show', cliente %></td>
-    <td><%= link_to 'Edit', edit_cliente_path(cliente) %></td>
-    <td><%= link_to 'Destroy', cliente, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'E', edit_cliente_path(cliente),:title => "Editar" %></td>
+    <td><%= link_to 'R', cliente, :confirm => 'Você tem certeza?', :method => :delete %></td>
   </tr>
-<% end %>
-</table>
+  <% end %>
+    </table>
+		 
+		
+    </div>
+ 
+   
+  
+ </div>
 
-<br />
-
-<%= link_to 'New Cliente', new_cliente_path %>
+</body>
+</html>

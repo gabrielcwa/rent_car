@@ -1,5 +1,55 @@
-<h1>New carro</h1>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<link href="estilo.css" rel="stylesheet" type="text/css">
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+<title>Ret-Car - Locação de veículos</title>
+</meta></head>
+<body>
 
-<%= render 'form' %>
+<div id="GERAL">
 
-<%= link_to 'Back', carros_path %>
+   <div id="TOPO"> 
+        <img src="/images/logo_01.gif"> </img> 
+   </div>
+      <div id="MENU"> 
+		    <a href="/carros/new"> Carros</a> 
+			<a href="/clientes/new"> Clientes</a> 
+			<a href="#"> Locações</a>
+		</div>
+   <div id="CONTEUDO">
+          <b> Cadastro de Carros</b>
+		   
+		  <hr>
+		 
+		 <table>
+		 <tr> <td> <h3> Dados do Carro: </h3> </td></tr>
+		 
+		<tr> 
+		   <td> Marca </td> <td> <input type="text" size="30"> </td> 
+		   
+		 </tr>
+		<tr> 
+		   <td> Modelo </td> <td> <input type="text" size="20"> </td> 
+		   
+		 </tr>
+		 <tr>
+		    <td> Ano </td> <td> <input type="text" size="20"> Placa <input type="text" size="10"></td>
+		 </tr>
+		 <tr>
+		 <td> Ano de Aquisição</td> <td> <input type="text" size="20"> Cor <input type="text" size="10"></td>
+		 </tr>
+		
+		 
+		
+		 
+		 <tr> <td> <input type="submit" value="Cadastrar"></td> </tr>
+		 </table>
+    </div>
+ 
+   
+  
+ </div>
+
+</body>
+</html>
