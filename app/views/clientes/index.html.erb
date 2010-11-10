@@ -47,7 +47,7 @@
     <td><%= cliente.municipio %></td>
     <td><%= cliente.estado %></td>
     <td><%= link_to 'E', edit_cliente_path(cliente), :title => 'Editar' %></td>
-    <td><%= link_to 'R', cliente, :confirm => 'Tem certeza que deseja remover?', :method => :delete, :title => 'Remover' %></td>
+    <td><%= link_to 'R', cliente, :confirm => "Tem certeza que deseja remover o cliente #{cliente.try(:nome)}?", :method => :delete, :title => 'Remover' %></td>
   </tr>
   <% end %>
     </table>

@@ -55,12 +55,12 @@
 		   
 		 </tr>
 		<tr> 
-		   <td> <%= f.label :numero%> </td> <td>  <%= f.text_field:numero, :size=>4%>   <%= f.label :cep, 'CEP'%> <%= f.text_field :cep,  :size=>10%> </td> 
+		   <td> <%= f.label :numero, 'Número'%> </td> <td>  <%= f.text_field:numero, :size=>4%>   <%= f.label :cep, 'CEP'%> <%= f.text_field :cep,  :size=>10%> </td> 
 		 <tr>
 		    <td> <%= f.label :bairro%> </td> <td> <%= f.text_field :bairro, :size=>20%> </td>
 		 </tr>
 		 <tr>
-		 <td> <%= f.label :municipio%></td> <td> <%= f.text_field :municipio, :size=>20%></td>
+		 <td> <%= f.label :municipio, 'Município'%></td> <td> <%= f.text_field :municipio, :size=>20%></td>
 		 </tr>
 		 <tr>
 		   <td> <%= f.label :estado%> </td> <td> <%= f.text_field :estado, :size=>12%> </td>
@@ -69,7 +69,7 @@
 		    <td> <%= f.label :naturalidade%> </td> <td> <%= f.text_field:naturalidade, :size=>12%> </td>
 		 </tr>
 		 
-		 <tr> <td> <%= f.submit %> </td> <td><%= link_to 'Voltar para listagem', clientes_path %></td> </tr>
+		 <tr> <td id='novo'> <%= f.submit %> </td> <td><%= link_to 'Voltar para listagem', clientes_path %></td> </tr>
 		 </table>
 	<% end %>
     </div>

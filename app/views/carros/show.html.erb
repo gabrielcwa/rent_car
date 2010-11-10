@@ -53,10 +53,11 @@
   		<%= @carro.cor %>
 		</p>
 
-		<div id="links">
- 	 	<%= link_to 'Editar', edit_carro_path(@carro) %> |
-	 	<%= link_to 'OK', carros_path %>
-		</div>
+		<span id="links">
+ 	 		 <%= link_to 'Editar', edit_carro_path(@carro) %>
+ 	 		 	 |
+	 		<%= link_to 'OK', carros_path %>
+		</span>
 	</table>
   </div>
   

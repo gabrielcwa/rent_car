@@ -22,6 +22,8 @@ color:#104E8B;
 h3{
  color: black;
  font: 14px "sans-serif", Verdana, Arial;
+ font-size: small;
+ font-weight: bold;
 }
 table{
 padding-left:20px;
@@ -30,13 +32,18 @@ color:black;
 tr{
 padding-left:10px;
 }
+TABLE.mytable
+	TD {
+	 border: 1px solid #999;
+	 border-width: 1px
+}
 a{
 text-decoration:none;
 font-size:14px;
 font-weight:Bold;
 background-color:#6CA6CD;
- -moz-border-top-left-radius: 3px;
- -moz-border-top-right-radius: 3px;
+ -moz-border-topleft-radius: 3px;
+ -moz-border-topright-radius: 3px;
  -webkit-border-top-left-radius: 3px;
  -webkit-border-top-right-radius: 3px;
 }
@@ -44,24 +51,20 @@ TD a{
 text-decoration:none;
 font-size:14px;
 font-weight:Bold;
-padding: 2px;
+padding: 2px 7px;
 background:#6CA6CD;
--moz-border-radius: 10px;
--moz-border-radius: 10px;
+-moz-border-radius-topleft: 35px;
+-moz-border-radius-topright: 35px;
+-moz-border-radius-bottomright: 35px;
+-moz-border-radius-bottomleft: 35px;
 -webkit-border-radius: 10px;
--webkit-border-radius: 10px;
+border: 1px solid #104E8B
 }
 a:hover{
-text-decoration:underline;
+background-color:#6C97CD;
 }
-#links{
-padding-left:20px;
-}
-#notice{
-color:green;
-font-size:16px;
-font-weight:Bold;
-padding-left:20px;
+#MENU {
+ background: #6CA6CD;
 }
 #MENU a{
  text-decoration:none;
@@ -72,11 +75,8 @@ padding-left:20px;
  font-family:Calibri;
  padding-left:10px;
  padding-right:10px; 
-}
-#MENU a:active{
- background-color: #E8E8E8;
- -moz-border-top-left-radius: 3px;
- -moz-border-top-right-radius: 3px;
+ -moz-border-radius-topleft: 3px;
+ -moz-border-radius-topright: 3px;
  -webkit-border-top-left-radius: 3px;
  -webkit-border-top-right-radius: 3px;
 }
@@ -84,10 +84,40 @@ padding-left:20px;
  background-color: #E8E8E8;
  padding-left:10px;
  padding-right:10px; 
- -moz-border-top-left-radius: 3px;
- -moz-border-top-right-radius: 3px;
+ -moz-border-radius-topleft: 3px;
+ -moz-border-radius-topright: 3px;
  -webkit-border-top-left-radius: 3px;
  -webkit-border-top-right-radius: 3px;
+}
+
+#links a{
+ -moz-border-radius: 50px 50px;
+-webkit-border-radius: 50px 50px;
+padding: 2px 7px; margin-left: 20px; border-width: 1px;  margin-right: 20px
+}
+#linknew a{
+float:right;
+margin-right:15px;
+padding:5px;
+background-color:#6CA6CD;
+-moz-border-radius: 50px 50px;
+-webkit-border-radius: 50px 50px;
+-moz-box-shadow: 5px 5px 5px #888; 
+-webkit-box-shadow: 5px 5px 5px #888; 
+-webkit-text-shadow: 2px 2px 2px #000;
+border: 1px solid #104E8B
+}
+#linknew a:hover{
+float:right;
+margin-right:15px;
+padding:5px;
+background-color:#6C97CD;
+-moz-border-radius: 50px 50px;
+-webkit-border-radius: 50px 50px;
+-moz-box-shadow: 5px 5px 5px #888; 
+-webkit-box-shadow: 5px 5px 5px #888; 
+-webkit-text-shadow: 2px 2px 2px #000;
+border: 1px solid #104E8B
 }
 /*Formatação bloco GERAL
  ****************************/
@@ -99,28 +129,34 @@ padding-left:20px;
 #TOPO {
  background: #104E8B;
  height:100px;
+ float: center;
+}
+LABEL {
+ font-size: small;
 }
 /*Formatação bloco CONTEUDO
  ****************************/
 #CONTEUDO {
  background:#E8E8E8;
  padding-top:18px;
- 
 }
-#MENU {
- background: #6CA6CD;
-}
-#linknew a{
-float:right;
-margin-right:15px;
-padding:3px;
-background-color:#6CA6CD;
--moz-border-radius: 5px;
--webkit-border-radius: 5px;
+#notice{
+color:green;
+font-size:16px;
+font-weight:Bold;
+padding-left:20px;
 }
 table.mytable { width: 100%; padding: 0px; border: none; border: 2px solid #6CA6CD;}
 table.mytable th { font-size: 12px; border: none; background-color: #104E8B; color:white; 
  padding: 2px; font-weight: bold; }
 table.mytable td {
 text-align: center;
+padding: 5px;
+}
+#MENU a:active{
+ background-color: #E8E8E8;
+ -moz-border-radius-topleft: 3px;
+ -moz-border-radius-topright: 3px;
+ -webkit-border-top-left-radius: 3px;
+ -webkit-border-top-right-radius: 3px;
 }

@@ -17,19 +17,19 @@
 			<a href="#"> Locações</a>
 		</div>
    <div id="CONTEUDO">
-          <b> Listagem de Carros</b>
-          <span id=linknew> <%= link_to 'Novo Carro', new_carro_path%> </span>
-		   <hr>
-		   <table width="300" class="mytable">
-		   <tr>
-    <th width=20%>Marca</th>
-    <th>Modelo</th>
-    <th>Ano</th>
-    <th>Placa</th>
-    <th>Ano aquisicao</th>
-    <th>Cor</th>
-    <th colspan=2> Ações </th>
-  </tr>
+	<b> Listagem de Carros</b>
+	<span id=linknew> <%= link_to 'Novo Carro', new_carro_path%> </span>
+	<hr>
+	<table width="300" class="mytable">
+		<tr>
+    		<th width=20%>Marca</th>
+    		<th>Modelo</th>
+    		<th>Ano</th>
+    		<th>Placa</th>
+    		<th width=10%>Ano aquisicao</th>
+    		<th>Cor</th>
+    		<th colspan=2> Ações </th>
+  		</tr>
   <% @carros.each do |carro| %>
   <tr>
     <td><%= carro.marca %></td>
@@ -38,8 +38,8 @@
     <td><%= carro.placa %></td>
     <td><%= carro.ano_aquisicao %></td>
     <td><%= carro.cor %></td>
-    <td><%= link_to 'E', edit_carro_path(carro), :title => 'Editar' %></td>
-    <td><%= link_to 'R', carro, :confirm => 'Tem certeza que deseja remover?', :method => :delete, :title => 'Remover' %></td>
+    <td style="padding: 5px; width: 20px; height: 20px;"><%= link_to 'E', edit_carro_path(carro), :title => 'Editar' %></td>
+    <td style="padding: 5px; width: 20px; height: 20px;"><%= link_to 'R', carro, :confirm => 'Tem certeza que deseja remover este carro?', :method => :delete, :title => 'Remover' %></td>
   </tr>
   <% end %>
         </table>
