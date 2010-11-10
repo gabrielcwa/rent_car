@@ -9,7 +9,7 @@
 
 <div id="GERAL">
 
-   <div id="TOPO"> 
+   <div id="TOPO" style="text-align:center;"> 
         <img src="/images/logo_01.gif"> </img> 
    </div>
       <div id="MENU"> 
@@ -35,19 +35,19 @@
 		   
 		 </tr>
 		 <tr>
-		    <td> <%= f.label :ano %> </td> <td> <%= f.text_field :ano %> </td>
+		    <td> <%= f.label :ano %> </td> <td> <%= f.text_field :ano, :size=>3 %> </td>
 		 </tr>
 		 <tr>
-		 	<td><%= f.label :placa %></td> <td><%= f.text_field :placa %></td>
+		 	<td><%= f.label :placa %></td> <td><%= f.text_field :placa, :size=>6 %></td>
 		 </tr>
 		 <tr>
-		 	<td><%= f.label :cor %></td> <td><%= f.text_field :cor %></td>
+		 	<td><%= f.label :cor %></td> <td><%= f.text_field :cor, :size=>6 %></td>
 		 </tr>
 		 <tr>
-			 <td> <%= f.label :ano_aquisicao %></td> <td> <%= f.text_field :ano_aquisicao %> </td>
+			 <td> <%= f.label :ano_aquisicao, 'Ano Aqusição' %></td> <td> <%= f.text_field :ano_aquisicao, :size=>3 %> </td>
 		 </tr>
 		 
-		 <tr> <td> <%= f.submit %> </td> <td><%= link_to 'Voltar para listagem', carros_path %></td> </tr>
+		 <tr> <td class="link_voltar"> <%= f.submit %> </td> <td><%= link_to 'Voltar para listagem', carros_path %></td> </tr>
 	</table>
 	<% end %>
     </div>

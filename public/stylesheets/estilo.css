@@ -6,7 +6,6 @@ body {
  font: 11px "Trebuchet MS", Calibri, Verdana, Arial;
 }
 #CONTEUDO b{
- 
  color: black;
  font: 17px "sans-serif", Verdana, Arial;
  padding-left:20px;
@@ -37,6 +36,9 @@ TABLE.mytable
 	 border: 1px solid #999;
 	 border-width: 1px
 }
+.link_voltar {
+text-decoration:none;	
+}
 a{
 text-decoration:none;
 font-size:14px;
@@ -48,20 +50,29 @@ background-color:#6CA6CD;
  -webkit-border-top-right-radius: 3px;
 }
 TD a{
+color: white;
 text-decoration:none;
 font-size:14px;
 font-weight:Bold;
 padding: 2px 7px;
-background:#6CA6CD;
 -moz-border-radius-topleft: 35px;
 -moz-border-radius-topright: 35px;
 -moz-border-radius-bottomright: 35px;
 -moz-border-radius-bottomleft: 35px;
 -webkit-border-radius: 10px;
-border: 1px solid #104E8B
+border: 1px solid #104E8B;
+  box-shadow: 0 1px 5px #104E8B, inset 0 10px 20px #66B1FF;
+ -moz-box-shadow: 0 1px 5px #104E8B, inset 0 10px 20px #66B1FF;
+  
+}
+TD A:hover {
+ border: 1px solid white;
+ box-shadow: 0 1px 5px #6CA6CD, inset 0 10px 20px #6CA6CD;
+ -moz-box-shadow: 0 1px 5px #6CA6CD, inset 0 10px 20px #6CA6CD;
 }
 a:hover{
 background-color:#6C97CD;
+
 }
 #MENU {
  background: #6CA6CD;
@@ -91,33 +102,38 @@ background-color:#6C97CD;
 }
 
 #links a{
- -moz-border-radius: 50px 50px;
--webkit-border-radius: 50px 50px;
+color: white;	
 padding: 2px 7px; margin-left: 20px; border-width: 1px;  margin-right: 20px
+box-shadow: inset 1px 6px 12px lightblue, inset -1px -10px 5px darkblue, 1px 2px 1px black;
+-o-box-shadow: inset 1px 6px 12px lightblue, inset -1px -10px 5px darkblue, 1px 2px 1px black;
+-webkit-box-shadow: inset 1px 6px 12px lightblue, inset -1px -10px 5px darkblue, 1px 2px 1px black;
+-moz-box-shadow: inset 1px 6px 12px lightblue, inset -1px -10px 5px darkblue, 1px 2px 1px black;
+-moz-border-radius: 50px 50px;
+-webkit-border-radius: 50px 50px;
 }
 #linknew a{
+border: 1px solid darkblue;
+background-color: blue;
+border-radius: 4px;
+box-shadow: inset 1px 6px 12px lightblue, inset -1px -10px 5px darkblue, 1px 2px 1px black;
+-o-box-shadow: inset 1px 6px 12px lightblue, inset -1px -10px 5px darkblue, 1px 2px 1px black;
+-webkit-box-shadow: inset 1px 6px 12px lightblue, inset -1px -10px 5px darkblue, 1px 2px 1px black;
+-moz-box-shadow: inset 1px 6px 12px lightblue, inset -1px -10px 5px darkblue, 1px 2px 1px black;
+color: white;
+text-shadow: 1p 1px 1px black;
+padding: 5px 30px;
+ -moz-border-radius: 50px 50px;
+-webkit-border-radius: 50px 50px;
 float:right;
 margin-right:15px;
-padding:5px;
-background-color:#6CA6CD;
--moz-border-radius: 50px 50px;
--webkit-border-radius: 50px 50px;
--moz-box-shadow: 5px 5px 5px #888; 
--webkit-box-shadow: 5px 5px 5px #888; 
--webkit-text-shadow: 2px 2px 2px #000;
-border: 1px solid #104E8B
+
 }
 #linknew a:hover{
-float:right;
-margin-right:15px;
-padding:5px;
-background-color:#6C97CD;
--moz-border-radius: 50px 50px;
--webkit-border-radius: 50px 50px;
--moz-box-shadow: 5px 5px 5px #888; 
--webkit-box-shadow: 5px 5px 5px #888; 
--webkit-text-shadow: 2px 2px 2px #000;
-border: 1px solid #104E8B
+border: 1px solid white;
+box-shadow: inset 1px 6px 12px lightblue, inset -1px -10px 5px darkblue, 1px 2px 1px black;
+-o-box-shadow: inset 1px 6px 12px lightblue, inset -1px -10px 5px darkblue, 1px 2px 1px black;
+-webkit-box-shadow: inset 1px 6px 12px lightblue, inset -1px -10px 5px darkblue, 1px 2px 1px black;
+-moz-box-shadow: inset 1px 6px 12px black, inset -1px -10px 5px darkblue, 1px 2px 1px black;
 }
 /*Formatação bloco GERAL
  ****************************/
@@ -159,4 +175,14 @@ padding: 5px;
  -moz-border-radius-topright: 3px;
  -webkit-border-top-left-radius: 3px;
  -webkit-border-top-right-radius: 3px;
+}
+INPUT {
+	background: #E5F2FF;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+}
+INPUT:hover {
+	background: #99CCFF;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
 }

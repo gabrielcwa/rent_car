@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/tapajos/brazilian-rails.git
+  revision: 0a22a05ead6c1ed58bb6d6532778ed1edbfb8170
+  specs:
+    brazilian_rails (2.1.14)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -70,5 +76,6 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  brazilian_rails (= 2.1.14)!
   rails (= 3.0.1)
   sqlite3-ruby
