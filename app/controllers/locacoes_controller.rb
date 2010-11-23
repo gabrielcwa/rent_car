@@ -3,8 +3,11 @@ class LocacoesController < ApplicationController
   def index
     query = Locacao.scoped
     
-    query = query.where(cliente_id: params[:cliente]) unless params[:cliente].blank?
-    query = query.where(carro_id: params[:carro]) unless params[:carro].blank?
+    cliente = "#{params[:cliente]}"
+    carro = "#{params[:carro]}"
+    
+    query = query.where(:cliente_id => cliente) unless cliente.blank?
+    query = query.where(:carro_id => carro) unless carro.blank?
     query = query.where('data_locacao LIKE ?', "#{params[:data_locacao]}%") unless params[:data_locacao].blank?
     query = query.where('data_entrega LIKE ?', "#{params[:data_entrega]}%") unless params[:data_entrega].blank?
     query = query.where('valor LIKE ?', "#{params[:valor]}%") unless params[:valor].blank?

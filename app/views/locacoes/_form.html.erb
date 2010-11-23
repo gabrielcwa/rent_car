@@ -27,9 +27,9 @@
 		 <table>
 		 <tr> <td> <h3> Dados da Locação: </h3> </td></tr>
 		 <tr> 
-		   <td><%= f.label :cliente, 'Cliente'%> <%= f.select :cliente_id, options_from_collection_for_select(Cliente.all, 'id', 'nome', @locacao.cliente_id), include_blank: true %></td>
+		   <td><%= f.label :cliente, 'Cliente'%> <%= f.select :cliente_id, options_from_collection_for_select(Cliente.all, 'id', 'nome', @locacao.cliente_id), :include_blank => true %></td>
 		   
- 		   <td><%= f.label :carro, 'Carro'%> <%= f.select :carro_id, options_from_collection_for_select(Carro.all, 'id', 'marca', @locacao.carro_id), include_blank: true%></td>
+ 		   <td><%= f.label :carro, 'Carro'%> <%= f.select :carro_id, options_from_collection_for_select(Carro.all, 'id', 'marca', @locacao.carro_id), :include_blank => true%></td>
  		   
  		   <tr>
  		    <td><%= f.label :data_locacao, 'Data de Locação'%></td><td> <%= f.text_field :data_locacao, :size=>9 %></td></tr>

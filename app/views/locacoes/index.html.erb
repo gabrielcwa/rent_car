@@ -19,11 +19,11 @@
    <div id="CONTEUDO">
           <b> Listagem de Locações</b>
           <span id=linknew> <%= link_to 'Nova Locação', new_locacao_path%> </span>
-       <% form_tag '#', method: :get, action: '/locacoes' do-%>
+       <% form_tag '/locacoes', :method => :get do%>
         <table>
-          <tr><td><%= label_tag 'Cliente'%><%= select_clientes(:cliente, {selected: params[:cliente]})%>
+          <tr><td><%= label_tag 'Cliente'%><%= select_tag 'cliente', options_from_collection_for_select(Cliente.all, 'id', 'nome'), :include_blank => true%>
           
-          <%= label_tag 'Carro'%><%= select_carros(:carro, {selected: params[:carro]})%></td></tr>
+          <%= label_tag 'Carro'%><%= select_tag 'carro', options_from_collection_for_select(Carro.all, 'id', 'marca'), :include_blank => true%></td></tr>
         
           <tr><td><%= label_tag 'Data de Locação'%><%= text_field_tag 'data_locacao'%>
           
@@ -33,7 +33,7 @@
         
         </table>
         <div id="pesquisar" style="text-align:center;"><%= submit_tag 'Pesquisar'%></div>
-       <% end-%>
+       <% end%>
 		   <hr>
 		   <table width="300" class="mytable">
 		    <tr>
