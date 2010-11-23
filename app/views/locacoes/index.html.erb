@@ -1,0 +1,70 @@
+<html>
+<head>
+<link href="estilo.css" rel="stylesheet" type="text/css">
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+<title>Ret-Car - Locação de veículos</title>
+</meta></head>
+<body>
+
+<div id="GERAL">
+
+   <div id="TOPO" style="text-align:center;"> 
+        <img src="/images/logo_01.gif"> </img> 
+   </div>
+      <div id="MENU"> 
+		    <a href="/carros"> Carros</a> 
+			<a href="/clientes"> Clientes</a> 
+			<a href="/locacoes"> Locações</a>
+		</div>
+   <div id="CONTEUDO">
+          <b> Listagem de Locações</b>
+          <span id=linknew> <%= link_to 'Nova Locação', new_locacao_path%> </span>
+       <% form_tag '#', method: :get, action: '/locacoes' do-%>
+        <table>
+          <tr><td><%= label_tag 'Cliente'%><%= select_clientes(:cliente, {selected: params[:cliente]})%>
+          
+          <%= label_tag 'Carro'%><%= select_carros(:carro, {selected: params[:carro]})%></td></tr>
+        
+          <tr><td><%= label_tag 'Data de Locação'%><%= text_field_tag 'data_locacao'%>
+          
+          <%= label_tag 'Data de Entrega'%><%= text_field_tag 'data_entrega'%>
+        
+          <%= label_tag 'Valor'%><%= text_field_tag 'valor'%></td></tr>
+        
+        </table>
+        <div id="pesquisar" style="text-align:center;"><%= submit_tag 'Pesquisar'%></div>
+       <% end-%>
+		   <hr>
+		   <table width="300" class="mytable">
+		    <tr>
+              <th width=15%>Cliente</th>
+              <th>Carro</th>
+              <th width=15%>Data de Locação</th>
+              <th>Data de Entrega</th>
+              <th>Valor</th>
+              <th colspan=2 >Ações</th>
+            </tr>
+            
+  <% if @locacoes.any? %>
+  	<% @locacoes.each do |locacao| %>
+  	<tr>
+      <td><%= locacao.cliente.try(:nome) %></td>
+      <td><%= locacao.carro.try(:marca) %></td>
+      <td><%= locacao.data_locacao %></td>
+    	<td><%= locacao.data_entrega %></td>
+      <td><%= locacao.valor %></td>
+      <td><%= link_to 'E', edit_locacao_path(locacao), :title => 'Editar' %></td>
+      <td><%= link_to 'R', locacao, :confirm => "Tem certeza que deseja remover a locação #{locacao.cliente.try(:nome)}?", :method => :delete, :title => 'Remover' %></td>
+    </tr>
+    <% end %>
+   </div>
+  <% elsif Locacao.count == 0 and @locacoes.empty? %>
+    <div id="dados_nao_cadastrados">Não existem dados cadastrados.</div>
+  <% else %>
+    <div id="retorno">Sua busca não retornou resultados.</div>
+  <%end%>
+      </table>
+    </div>
+
+</body>
+</html>

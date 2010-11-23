@@ -1,0 +1,52 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<link href="estilo.css" rel="stylesheet" type="text/css">
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+<title>Ret-Car - Locação de veículos</title>
+</meta></head>
+<body>
+
+<div id="GERAL">
+
+   <div id="TOPO" style="text-align:center;"> 
+        <img src="/images/logo_01.gif"> </img> 
+   </div>
+      <div id="MENU"> 
+		    <a href="/carros"> Carros</a> 
+			<a href="/clientes"> Clientes</a> 
+			<a href="/locacoes"> Locações</a>
+		</div>
+   <div id="CONTEUDO">
+   	<%= form_for(@locacao) do |f| %>
+          <b> Cadastro de Locação</b>
+		   
+		  <hr> 
+		 
+		 <table>
+		 <tr> <td> <h3> Dados da Locação: </h3> </td></tr>
+		 <tr> 
+		   <td><%= f.label :cliente, 'Cliente'%> <%= f.select :cliente_id, options_from_collection_for_select(Cliente.all, 'id', 'nome', @locacao.cliente_id), include_blank: true %></td>
+		   
+ 		   <td><%= f.label :carro, 'Carro'%> <%= f.select :carro_id, options_from_collection_for_select(Carro.all, 'id', 'marca', @locacao.carro_id), include_blank: true%></td>
+ 		   
+ 		   <tr>
+ 		    <td><%= f.label :data_locacao, 'Data de Locação'%></td><td> <%= f.text_field :data_locacao, :size=>9 %></td></tr>
+ 		   
+        <tr>
+ 		      <td><%= f.label :data_entrega, 'Data de Entrega'%></td><td> <%= f.text_field :data_entrega, :size=>9 %></td></tr>
+ 		   
+ 		   <tr><td><%= f.label :valor, 'Valor'%></td><td> <%= f.text_field :valor, :size=>9 %></td></tr> 
+    		
+		 <tr> <td id='novo'> <%= f.submit %> </td> <td><%= link_to 'Voltar para listagem', locacoes_path %></td> </tr>
+		 </table>
+	<% end %>
+    </div>
+ 
+   
+  
+ </div>
+
+</body>
+</html>

@@ -18,46 +18,40 @@
 			<a href="/locacoes"> Locações</a>
 		</div>
 	<div id="CONTEUDO">
-	<%= form_for(@carro) do |f| %>
+	<%= form_for(@locacao) do |f| %>
 
 	 <table>
 		<p id="notice"><%= notice %></p>
 			<hr>
 		<p>
-  		<b>Marca:</b>
-  		<%= @carro.marca %>
+		 <b>Nome do Cliente:</b>
+			  <%= @locacao.cliente.try(:nome) %>
+   		 </p>
+
+		<p>
+  		<b>Marca do Carro:</b>
+	  		 <%= @locacao.carro.try(:marca) %>
 		</p>
 
 		<p>
-  		<b>Modelo:</b>
-  		<%= @carro.modelo %>
+	   	<b>Data de Locação:</b>
+  			<%= @locacao.data_locacao %>
 		</p>
 
 		<p>
-  		<b>Ano:</b>
-  		<%= @carro.ano %>
+  		<b>Data de Entrega:</b>
+  			<%= @locacao.data_entrega %>
 		</p>
 
 		<p>
-  		<b>Placa:</b>
-  		<%= @carro.placa %>
+  		<b>Valor:</b>
+  			<%= @locacao.valor %>
 		</p>
-
-		<p>
-  		<b>Ano aquisicao:</b>
-  		<%= @carro.ano_aquisicao %>
-		</p>
-
-		<p>
-  		<b>Cor:</b>
-  		<%= @carro.cor %>
-		</p>
-
-		<span id="links">
- 	 		 <%= link_to 'Editar', edit_carro_path(@carro) %>
- 	 		 	 |
-	 		<%= link_to 'OK', carros_path %>
-		</span>
+		
+		<div id="links">
+			<%= link_to 'Edit', edit_locacao_path(@locacao) %> |
+			<%= link_to 'OK', locacoes_path %>
+		</div>
 	</table>
   </div>
   
